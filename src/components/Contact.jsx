@@ -104,7 +104,7 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gray-900">
+    <section id="contact" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Información de contacto */}
@@ -112,7 +112,7 @@ function Contact() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               CONTÁCTANOS
             </h2>
-            <p className="text-gray-400 mb-8 text-lg">
+            <p className="text-zinc-400 mb-8 text-lg">
               ¿Listo para transformar tu vida? Estamos aquí para ayudarte.
             </p>
 
@@ -121,7 +121,7 @@ function Contact() {
                 <div className="text-red-600 text-3xl mr-4">📍</div>
                 <div>
                   <h3 className="text-white font-bold mb-1">Dirección</h3>
-                  <p className="text-gray-400">Av. Fitness 123, Ciudad</p>
+                  <p className="text-zinc-400">Av. Fitness 123, Ciudad</p>
                 </div>
               </div>
 
@@ -129,7 +129,7 @@ function Contact() {
                 <div className="text-red-600 text-3xl mr-4">📞</div>
                 <div>
                   <h3 className="text-white font-bold mb-1">Teléfono</h3>
-                  <p className="text-gray-400">+1 234 567 890</p>
+                  <p className="text-zinc-400">+1 234 567 890</p>
                 </div>
               </div>
 
@@ -137,7 +137,7 @@ function Contact() {
                 <div className="text-red-600 text-3xl mr-4">📧</div>
                 <div>
                   <h3 className="text-white font-bold mb-1">Email</h3>
-                  <p className="text-gray-400">info@fitgym.com</p>
+                  <p className="text-zinc-400">info@fitgym.com</p>
                 </div>
               </div>
 
@@ -145,8 +145,8 @@ function Contact() {
                 <div className="text-red-600 text-3xl mr-4">⏰</div>
                 <div>
                   <h3 className="text-white font-bold mb-1">Horarios</h3>
-                  <p className="text-gray-400">Lun - Vie: 6AM - 11PM</p>
-                  <p className="text-gray-400">Sáb - Dom: 7AM - 9PM</p>
+                  <p className="text-zinc-400">Lun - Vie: 6AM - 11PM</p>
+                  <p className="text-zinc-400">Sáb - Dom: 7AM - 9PM</p>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ function Contact() {
 
           {/* Formulario */}
           <div data-aos="fade-left">
-            <form onSubmit={handleSubmit} className="bg-gray-800 p-8 rounded-lg">
+            <form onSubmit={handleSubmit} className="bg-zinc-800 p-8 rounded-lg">
               <div className="mb-6">
                 <input
                   type="text"
@@ -162,7 +162,7 @@ function Contact() {
                   placeholder="Tu Nombre"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 ${
+                  className={`w-full px-4 py-3 bg-zinc-700 text-white rounded-lg focus:outline-none focus:ring-2 ${
                     errors.name ? 'ring-2 ring-red-500' : 'focus:ring-red-600'
                   }`}
                 />
@@ -178,7 +178,7 @@ function Contact() {
                   placeholder="Tu Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 ${
+                  className={`w-full px-4 py-3 bg-zinc-700 text-white rounded-lg focus:outline-none focus:ring-2 ${
                     errors.email ? 'ring-2 ring-red-500' : 'focus:ring-red-600'
                   }`}
                 />
@@ -194,7 +194,7 @@ function Contact() {
                   placeholder="Tu Teléfono"
                   value={formData.phone}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 ${
+                  className={`w-full px-4 py-3 bg-zinc-700 text-white rounded-lg focus:outline-none focus:ring-2 ${
                     errors.phone ? 'ring-2 ring-red-500' : 'focus:ring-red-600'
                   }`}
                 />
@@ -210,7 +210,7 @@ function Contact() {
                   rows="4"
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 resize-none ${
+                  className={`w-full px-4 py-3 bg-zinc-700 text-white rounded-lg focus:outline-none focus:ring-2 resize-none ${
                     errors.message ? 'ring-2 ring-red-500' : 'focus:ring-red-600'
                   }`}
                 ></textarea>
@@ -224,7 +224,7 @@ function Contact() {
                 disabled={isSubmitting}
                 className={`w-full py-3 rounded-lg font-bold transition transform hover:scale-105 ${
                   isSubmitting
-                    ? 'bg-gray-600 cursor-not-allowed'
+                    ? 'bg-zinc-600 cursor-not-allowed'
                     : 'bg-red-600 hover:bg-red-700 text-white'
                 }`}
               >

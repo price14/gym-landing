@@ -7,7 +7,7 @@ function Hero() {
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
           TRANSFORMA TU <span className="text-red-600">CUERPO</span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-2xl mx-auto">
           Alcanza tus metas fitness con los mejores entrenadores y equipamiento
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -39,12 +39,12 @@ function Pricing() {
   ]
 
   return (
-    <section id="pricing" className="py-20 bg-gray-900">
+    <section id="pricing" className="py-20 bg-zinc-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4" data-aos="fade-up">
           PLANES Y <span className="text-red-600">PRECIOS</span>
         </h2>
-        <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <p className="text-center text-zinc-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
           Elige el plan que mejor se adapte a tus necesidades
         </p>
 
@@ -52,7 +52,7 @@ function Pricing() {
           {plans.map((plan, index) => (
             <div 
               key={index}
-              className={`relative bg-gray-800 rounded-2xl p-8 ${
+              className={`relative bg-zinc-800 rounded-2xl p-8 ${
                 plan.popular ? 'ring-4 ring-red-600 transform scale-105' : ''
               }`}
               data-aos="flip-left"
@@ -68,12 +68,12 @@ function Pricing() {
               
               <div className="text-center mb-6">
                 <span className="text-5xl font-bold text-white">${plan.price}</span>
-                <span className="text-gray-400">/mes</span>
+                <span className="text-zinc-400">/mes</span>
               </div>
 
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start text-gray-300">
+                  <li key={idx} className="flex items-start text-zinc-300">
                     <span className="text-red-600 mr-2 text-xl">✓</span>
                     <span>{feature}</span>
                   </li>
@@ -85,7 +85,7 @@ function Pricing() {
                 className={`block w-full py-3 rounded-full font-bold text-center transition transform hover:scale-105 ${
                   plan.popular 
                     ? 'bg-red-600 hover:bg-red-700 text-white' 
-                    : 'bg-gray-700 hover:bg-gray-600 text-white'
+                    : 'bg-zinc-700 hover:bg-zinc-600 text-white'
                 }`}
               >
                 Seleccionar Plan

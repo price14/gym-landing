@@ -37,7 +37,7 @@ function Gallery() {
   ]
 
   return (
-    <section id="gallery" className="py-20 bg-black">
+    <section id="gallery" className="py-20 bg-zinc-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4" data-aos="fade-up">
           NUESTRAS <span className="text-red-600">INSTALACIONES</span>

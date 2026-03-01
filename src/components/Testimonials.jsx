@@ -67,19 +67,19 @@ function Testimonials() {
   }
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20 bg-zinc-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">
           LO QUE DICEN <span className="text-red-600">NUESTROS CLIENTES</span>
         </h2>
-        <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-zinc-400 mb-12 max-w-2xl mx-auto">
           Historias reales de personas que transformaron sus vidas con nosotros
         </p>
 
         {/* Carrusel */}
         <div className="relative max-w-4xl mx-auto">
           {/* Tarjeta de testimonio */}
-          <div className="bg-gray-800 rounded-2xl p-8 md:p-12 shadow-2xl">
+          <div className="bg-zinc-800 rounded-2xl p-8 md:p-12 shadow-2xl">
             <div className="flex flex-col items-center text-center">
               {/* Avatar */}
               <div className="text-7xl mb-4">
@@ -94,7 +94,7 @@ function Testimonials() {
               </div>
 
               {/* Texto */}
-              <p className="text-gray-300 text-lg md:text-xl mb-6 italic leading-relaxed">
+              <p className="text-zinc-300 text-lg md:text-xl mb-6 italic leading-relaxed">
                 "{testimonials[currentIndex].text}"
               </p>
 
@@ -130,7 +130,7 @@ function Testimonials() {
               key={index}
               onClick={() => goToTestimonial(index)}
               className={`w-3 h-3 rounded-full transition ${
-                index === currentIndex ? 'bg-red-600 w-8' : 'bg-gray-600 hover:bg-gray-500'
+                index === currentIndex ? 'bg-red-600 w-8' : 'bg-zinc-600 hover:bg-zinc-500'
               }`}
             />
           ))}
@@ -139,12 +139,12 @@ function Testimonials() {
         {/* Grid de testimonios (opcional - versión desktop) */}
         <div className="hidden lg:grid grid-cols-3 gap-6 mt-16">
           {testimonials.slice(0, 3).map((testimonial) => (
-            <div key={testimonial.id} className="bg-gray-800 rounded-lg p-6 hover:transform hover:scale-105 transition">
+            <div key={testimonial.id} className="bg-zinc-800 rounded-lg p-6 hover:transform hover:scale-105 transition">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-3">{testimonial.image}</div>
                 <div>
                   <h4 className="text-white font-bold">{testimonial.name}</h4>
-                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                  <p className="text-zinc-400 text-sm">{testimonial.role}</p>
                 </div>
               </div>
               <div className="flex space-x-1 mb-3">
@@ -152,7 +152,7 @@ function Testimonials() {
                   <span key={i} className="text-yellow-400">★</span>
                 ))}
               </div>
-              <p className="text-gray-300 text-sm italic">"{testimonial.text.substring(0, 100)}..."</p>
+              <p className="text-zinc-300 text-sm italic">"{testimonial.text.substring(0, 100)}..."</p>
             </div>
           ))}
         </div>

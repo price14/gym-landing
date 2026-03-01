@@ -51,12 +51,12 @@ function Trainers() {
   ]
 
   return (
-    <section id="trainers" className="py-20 bg-gray-900">
+    <section id="trainers" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4" data-aos="fade-up">
           NUESTRO <span className="text-red-600">EQUIPO</span>
         </h2>
-        <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <p className="text-center text-zinc-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
           Entrenadores certificados comprometidos con tus resultados
         </p>
 
@@ -64,7 +64,7 @@ function Trainers() {
           {trainers.map((trainer, index) => (
             <div
               key={trainer.id}
-              className="bg-gray-800 rounded-lg overflow-hidden group hover:transform hover:scale-105 transition-all duration-300"
+              className="bg-zinc-700 rounded-lg overflow-hidden group hover:transform hover:scale-105 transition-all duration-300"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -75,7 +75,7 @@ function Trainers() {
                   alt={trainer.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-60"></div>
                 
                 {/* Redes sociales (aparecen al hover) */}
                 <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -110,7 +110,7 @@ function Trainers() {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-1">{trainer.name}</h3>
                 <p className="text-red-600 font-semibold mb-3">{trainer.specialty}</p>
-                <p className="text-gray-400 text-sm">{trainer.description}</p>
+                <p className="text-zinc-400 text-sm">{trainer.description}</p>
               </div>
             </div>
           ))}

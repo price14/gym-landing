@@ -48,7 +48,7 @@ function FAQ() {
         <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4" data-aos="fade-up">
           PREGUNTAS <span className="text-red-600">FRECUENTES</span>
         </h2>
-        <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <p className="text-center text-zinc-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
           Resolvemos tus dudas más comunes
         </p>
 
@@ -56,7 +56,7 @@ function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-red-600 transition"
+              className="bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 hover:border-red-600 transition"
               data-aos="fade-up"
               data-aos-delay={index * 50}
             >
@@ -79,7 +79,7 @@ function FAQ() {
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
               >
-                <div className="px-6 pb-5 text-gray-400 leading-relaxed">
+                <div className="px-6 pb-5 text-zinc-400 leading-relaxed">
                   {faq.answer}
                 </div>
               </div>
@@ -89,7 +89,7 @@ function FAQ() {
 
         {/* CTA adicional */}
         <div className="mt-12 text-center" data-aos="fade-up" data-aos-delay="400">
-          <p className="text-gray-400 mb-4">¿Tienes más preguntas?</p>
+          <p className="text-zinc-400 mb-4">¿Tienes más preguntas?</p>
           <a 
             href="#contact" 
             className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105"

@@ -75,7 +75,7 @@ function Stats() {
                   '0'
                 )}
               </div>
-              <p className="text-gray-300 text-lg font-semibold">{stat.label}</p>
+              <p className="text-zinc-300 text-lg font-semibold">{stat.label}</p>
             </div>
           ))}
         </div>
