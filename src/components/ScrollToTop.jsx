@@ -1,40 +1,36 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [isScrolling, setIsScrolling] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-      }
+      setIsVisible(window.pageYOffset > 300);
     }
 
-    window.addEventListener('scroll', toggleVisibility)
-
+    window.addEventListener('scroll', toggleVisibility);
     return () => {
-      window.removeEventListener('scroll', toggleVisibility)
+      window.removeEventListener('scroll', toggleVisibility);
     }
-  }, [])
+  }, []);
 
   const scrollToTop = () => {
-    setIsScrolling(true)
+    setIsScrolling(true);
     
-    // Scroll animado más lento y visible
-    const scrollStep = -window.scrollY / (1500 / 15) // Duración: 1500ms
+    // Ajustar la duración y el scrollStep
+    const duration = 500; // Duración más corta para móviles
+    const scrollStep = -window.scrollY / (duration / 15);
     
     const scrollInterval = setInterval(() => {
       if (window.scrollY !== 0) {
-        window.scrollBy(0, scrollStep)
+        window.scrollBy(0, scrollStep);
       } else {
-        clearInterval(scrollInterval)
-        setIsScrolling(false)
+        clearInterval(scrollInterval);
+        setIsScrolling(false);
       }
-    }, 15)
-  }
+    }, 15);
+  };
 
   return (
     <>
@@ -72,7 +68,7 @@ function ScrollToTop() {
         </button>
       )}
     </>
-  )
+  );
 }
 
-export default ScrollToTop
+export default ScrollToTop;
