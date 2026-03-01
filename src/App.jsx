@@ -10,7 +10,6 @@ import Stats from './components/Stats'
 import FAQ from './components/FAQ'
 import Gallery from './components/Gallery'
 import Trainers from './components/Trainers'
-import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
       <Classes />
       <Trainers />
       <Stats />
-      <ScrollToTop />
       <FAQ />
       <Gallery />
       <Testimonials />
