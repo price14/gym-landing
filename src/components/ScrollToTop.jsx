@@ -16,20 +16,26 @@ function ScrollToTop() {
   }, []);
 
   const scrollToTop = () => {
-    setIsScrolling(true);
-    
-    // Ajustar la duración y el scrollStep
-    const duration = 500; // Duración más corta para móviles
-    const scrollStep = -window.scrollY / (duration / 15);
-    
-    const scrollInterval = setInterval(() => {
-      if (window.scrollY !== 0) {
-        window.scrollBy(0, scrollStep);
-      } else {
-        clearInterval(scrollInterval);
-        setIsScrolling(false);
-      }
-    }, 15);
+    // Verificar si es un dispositivo móvil
+    if (window.innerWidth > 768) { // Puedes ajustar este valor según tus necesidades
+      setIsScrolling(true);
+      const duration = 500;
+      const start = window.scrollY;
+      const startTime = performance.now();
+
+      const animateScroll = (currentTime) => {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        window.scrollTo(0, start * (1 - progress));
+        if (progress < 1) {
+          requestAnimationFrame(animateScroll);
+        } else {
+          setIsScrolling(false);
+        }
+      };
+
+      requestAnimationFrame(animateScroll);
+    }
   };
 
   return (
@@ -43,11 +49,6 @@ function ScrollToTop() {
               ? 'bg-red-700 scale-95 cursor-wait'
               : 'bg-red-600 hover:bg-red-700 hover:scale-110 animate-bounce hover:animate-none'
           }`}
-          style={{
-            boxShadow: isScrolling 
-              ? '0 0 30px rgba(220, 38, 38, 0.8)' 
-              : '0 10px 25px rgba(0, 0, 0, 0.5)'
-          }}
           aria-label="Volver arriba"
         >
           <svg

@@ -8,9 +8,9 @@ import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
 import Stats from './components/Stats'
 import FAQ from './components/FAQ'
-import ScrollToTop from './components/ScrollToTop'
 import Gallery from './components/Gallery'
 import Trainers from './components/Trainers'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
       <About />
       <Classes />
       <Trainers />
-      <ScrollToTop />
       <Stats />
+      <ScrollToTop />
       <FAQ />
       <Gallery />
       <Testimonials />
