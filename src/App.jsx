@@ -10,6 +10,7 @@ import Stats from './components/Stats'
 import FAQ from './components/FAQ'
 import Gallery from './components/Gallery'
 import Trainers from './components/Trainers'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <ScrollToTop />
       <Classes />
       <Trainers />
       <Stats />
